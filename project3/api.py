@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 model = tf.keras.models.load_model('models/altlenet5.keras')
 
-@app.route('/models', methods=['GET'])
+@app.route('/model/info', methods=['GET'])
 def model_info():
    return {
       "version": "v1",
@@ -25,7 +25,7 @@ def preprocess_input(im):
    # then add an extra dimension
    return d.reshape(1, 28, 28)
 
-@app.route('/models', methods=['POST'])
+@app.route('/model/predict', methods=['POST'])
 def classify_image():
    im = request.json.get('image')
    if not im:
