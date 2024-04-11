@@ -11,8 +11,7 @@ def model_info():
    return {
       "version": "v1",
       "name": "altlenet5",
-      "description": "Classifies images containing damaged and undamaged buildings from Hurricane Harvey",
-      "number_of_parameters": 133280
+      "description": "Classifies images containing damaged and undamaged buildings from Hurricane Harvey"
    }
 
 def preprocess_input(im):
