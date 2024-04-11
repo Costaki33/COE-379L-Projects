@@ -58,4 +58,4 @@ rsp.json()
 
 {'result': [[0.0]]}
 ```
-The expected output from the POST command is a prediction array that binarily states [damaged, not_damaged]. For example, if a house is damaged, it will output [1.0, 0.0]
+The expected output from the POST command is a prediction array that binarily states [damaged, not_damaged]. For example, if a house is damaged, it will output [1.0], and if it is not, it will output [0.0].
