@@ -12,6 +12,19 @@ $ cd COE-379L-Projects/project3
 ```
 Vim into the Dockerfile and change where it says 'costaki33' with your Dockerhub login information. Be sure to log into to Docker on your terminal or you won't be able to run the following commands: 
 ```
+$ ubuntu@costaki-coe379vm:~/COE-379L-Projects/project3$ cat Dockerfile 
+# Image: costaki33/project3 <- Change this to your user 
+
+FROM python:3.11
+
+RUN pip install tensorflow==2.15
+RUN pip install Flask==3.0
+
+COPY models ./models
+COPY api.py ./api.py
+
+CMD ["python3", "api.py"]
+
 $ docker build -t costaki33/project3 .
 $ docker run -it --rm -p 5000:5000 costaki33/project3
 ```
