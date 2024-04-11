@@ -22,7 +22,7 @@ def preprocess_input(im):
    # convert to a numpy array
    d = np.array(im)
    # then add an extra dimension
-   return d.reshape(1, 128, 128)
+   return d.reshape(1, 128, 128, 3)
 
 @app.route('/model/predict', methods=['POST'])
 def classify_image():
