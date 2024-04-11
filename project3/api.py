@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = tf.keras.models.load_model('models/altlenet5.keras')
+model = tf.keras.models.load_model('./models/altlenet5.keras')
 
 @app.route('/model/info', methods=['GET'])
 def model_info():
