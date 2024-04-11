@@ -30,12 +30,13 @@ $ docker run -it --rm -p 5000:5000 costaki33/project3
 ```
 Now, load a Jupyter Notebook that has access to the Docker image. We can run HTTP GET & POST Requests
 ```
-# GET
-# Will return the information of the model that the interface has access to
-# We chose to use the Alternative LeNet-5 Model as it was the best performing model out of the models we explored
-rsp = requests.get("http://172.17.0.1:5000/model/info")
-rsp.json()
+import requests
 
+# make the GET request:
+rsp = requests.get("http://172.17.0.1:5000/model/info")
+
+# print the json response
+rsp.json()
 
 {
     'description': 'Classifies images containing damaged and undamaged buildings from Hurricane Harvey',
@@ -44,12 +45,15 @@ rsp.json()
 }
 ```
 ```
-# POST
-# Will return when provided an image whether an image ("house") is damaged or not 
-l = np.array(Image.open('./data/split/test/no_damage/-95.061894_30.0
-    07746.jpeg')).tolist()
-rsp = requests.post("http://172.17.0.1:5000/model/predict",
-      json={"image": l})
+import numpy as np
+from PIL import Image
+
+l = np.array(Image.open('./data/split/test/damage/-93.528502_30.987438.jpeg')).tolist()
+
+# make the POST request passing the sinlge test case as the `image` field:
+rsp = requests.post("http://172.17.0.1:5000/model/predict", json={"image": l})
+
+# print the json response
 rsp.json()
 
 {'result': [[0.0]]}
