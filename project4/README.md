@@ -4,7 +4,7 @@ The goal of this project is to create a machine learning model that can help us 
 
 ## Models
 
-We will be creating two machine learning models—-a convolutional neural network (CNN) and a convolutional neural network with LeNet-5 architecture-—to test our data on them. We chose a standard convolutional neural network to show the simplest form of neural network architecture and its limitations, and chose a more refined LeNet-5 model to improve our result accuracy as it is an extremely strong model in image recognition.
+We will be creating two machine learning models—a convolutional neural network (CNN) and a convolutional neural network with LeNet-5 architecture—to test our data on them. We chose a standard convolutional neural network to show the simplest form of neural network architecture and its limitations, and chose a more refined LeNet-5 model to improve our result accuracy as it is an extremely strong model in image recognition.
 
 ### Standard Convolutional Neural Network
 
