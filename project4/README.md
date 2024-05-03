@@ -67,7 +67,8 @@ We will be creating two machine learning models—a convolutional neural network
 ```
 
 ### File Set up 
-Download the Labeled From the Wild dataset from this link: `http://vis-www.cs.umass.edu/lfw/`. Click on the `download` section and click on 'All images as gzipped tar file' to download the zip file. 
+Download the Labeled From the Wild dataset from this link: `http://vis-www.cs.umass.edu/lfw/`. Click on the `download` section and click on 'All images as gzipped tar file' to download the zip file. We removed half of the images to 
+make the processing easier, please remove half of the files. 
 
 
 ### Testing
