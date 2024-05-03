@@ -4,6 +4,8 @@ The goal of this project is to create a machine learning model that can help us 
 
 ## Models
 
+We will be creating two machine learning models—-a convolutional neural network (CNN) and a convolutional neural network with LeNet-5 architecture-—to test our data on them. We chose a standard convolutional neural network to show the simplest form of neural network architecture and its limitations, and chose a more refined LeNet-5 model to improve our result accuracy as it is an extremely strong model in image recognition.
+
 ### Standard Convolutional Neural Network
 
 ```Model: "sequential_12"
@@ -34,7 +36,10 @@ The goal of this project is to create a machine learning model that can help us 
  Trainable params: 55,212,101 (210.62 MB)
  Non-trainable params: 0 (0.00 B)
  Optimizer params: 2 (12.00 B) (reg CNN)
+```
 
+### LeNet-5 Convolutional Neural Network Architecture
+```
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
 ┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
 ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
@@ -58,6 +63,5 @@ The goal of this project is to create a machine learning model that can help us 
 └─────────────────────────────────┴────────────────────────┴───────────────┘
  Total params: 7,156,077 (27.30 MB)
  Trainable params: 7,156,077 (27.30 MB)
- Non-trainable params: 0 (0.00 B) (lenet)
-
+ Non-trainable params: 0 (0.00 B)
 ```
