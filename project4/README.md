@@ -65,3 +65,38 @@ We will be creating two machine learning models—a convolutional neural network
  Trainable params: 7,156,077 (27.30 MB)
  Non-trainable params: 0 (0.00 B)
 ```
+
+### Testing
+
+After the two models run in the Jupyter Notebook (`Family_Facial_Recognition.ipynb`), there is a cell at the bottom of each model in the code as follows:
+```
+# Evaluate the model
+val_loss, val_acc = model.evaluate(validation_generator)
+print(f"Validation accuracy: {val_acc}")
+
+# Save the model
+model.save('family_member_classifier.h5')
+
+# Load and use the model
+from tensorflow.keras.models import load_model
+model = load_model('family_member_classifier.h5')
+
+# Predicting with the model
+from tensorflow.keras.preprocessing import image
+import numpy as np
+
+# Load an image
+img = image.load_img('test_images/<IMAGE NAME>', target_size=(250, 250))
+img_tensor = image.img_to_array(img)
+img_tensor = np.expand_dims(img_tensor, axis=0)
+img_tensor /= 255.
+
+# Make a prediction
+prediction = model.predict(img_tensor)
+print(prediction)
+```
+To test an image from the `test_images` folder, replace `<IMAGE NAME>` with the name of an image. The output is in the form
+
+`[[athena, costaki, george, stranger, teresa]]`
+
+where each name gets a value from 0 to 1 based on who the model thinks the image is of.
