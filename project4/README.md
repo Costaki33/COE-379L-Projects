@@ -66,6 +66,10 @@ We will be creating two machine learning models—a convolutional neural network
  Non-trainable params: 0 (0.00 B)
 ```
 
+### File Set up 
+Download the Labeled From the Wild dataset from this link: `http://vis-www.cs.umass.edu/lfw/`. Click on the `download` section and click on 'All images as gzipped tar file' to download the zip file. 
+
+
 ### Testing
 
 After the two models run in the Jupyter Notebook (`Family_Facial_Recognition.ipynb`), there is a cell at the bottom of each model in the code as follows:
